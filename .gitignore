@@ -59,3 +59,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 pengpeng/Temp/UnityLockfile
+pengpeng/Library
+*.jpg.meta
