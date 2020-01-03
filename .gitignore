@@ -60,4 +60,4 @@ crashlytics-build.properties
 
 pengpeng/Temp/UnityLockfile
 pengpeng/Library
-pengpeng/Assets/Images/*.jpg.meta
+*.jpg.meta
