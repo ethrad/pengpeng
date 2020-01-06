@@ -1,0 +1,10 @@
+[
+  {
+    "EID": 0,
+    "name": "bad ending",
+    "condition": "day <= 0",
+    "image": "bad",
+    "script": "당신은 죽었다",
+    "isDone": true
+  }
+]
