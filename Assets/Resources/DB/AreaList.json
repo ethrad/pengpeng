@@ -1,0 +1,16 @@
+{
+  "AreaList": [
+    {
+      "AID": 0,
+      "background": "grass",
+      "canMove": [ 0, 1, 2 ],
+      "bgm": "high"
+    },
+    {
+      "AID": 1,
+      "background": "sand",
+      "canMove": [ 1, 2, 3 ],
+      "bgm": "low"
+    }
+  ]
+}
