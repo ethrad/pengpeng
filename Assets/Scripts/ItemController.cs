@@ -11,6 +11,7 @@ public class Item
     public int IID;
     public string name;
     public string description;
+    public string image;
 }
 
 [Serializable]
