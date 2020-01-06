@@ -1,0 +1,15 @@
+{
+    "ItemList":[
+
+        {
+            "IID":0,
+            "name":"possion",
+            "description":"무언가 비밀의 해답이 될 것 같다." 
+        },
+        {
+            "IID":1,
+            "name":"꽃",
+            "description":"꿀이 가득 들어있을 것 같은 꽃이다." 
+        }
+    ]
+}
