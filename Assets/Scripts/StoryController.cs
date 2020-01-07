@@ -64,5 +64,7 @@ public class StoryController : MonoBehaviour
         name.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script.Split(':')[0];
         background.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/" + storyList.SL[storyNum].Scripts[SN].background);
         script.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script.Split(':')[1];
+        leftCha.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/" + storyList.SL[storyNum].Scripts[SN].leftCha);
+        rightCha.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/" + storyList.SL[storyNum].Scripts[SN].rightCha);
     }
 }
