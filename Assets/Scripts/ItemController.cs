@@ -24,14 +24,23 @@ public class ItemController : MonoBehaviour
 {
     // Start is called before the first frame update
     public static ItemDB IL = new ItemDB();
-    public GameObject SlotHolder;
-
+    public static ItemDB IL1 = new ItemDB();
+    public GameObject UI_image;
+    public Text UI_name;
+    public Text UI_description;
+   
     TextAsset textData;
 
     void Start()
     {
-        textData=Resources.Load("DB/ItemList") as TextAsset;
+        
+
+        textData = Resources.Load("DB/ItemList") as TextAsset;
         IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
+        UI_name.GetComponent<Text>().text = IL.ItemList[0].name;
+        UI_description.GetComponent<Text>().text = IL.ItemList[0].description;
+        UI_image.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/"+IL.ItemList[0].image);
+
         Debug.Log(IL.ItemList[0].name);
         Debug.Log("sss");
     }
