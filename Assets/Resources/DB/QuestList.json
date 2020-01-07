@@ -1,0 +1,22 @@
+{
+  "QuestList": [
+    {
+      "QID": 0,
+      "isDone": false,
+      "bgm": "high",
+      "CID": 1,
+      "condition": "CharacterList[0].love>1",
+      "script": "퀘스트 0번",
+      "background": "grass"
+    },
+    {
+      "QID": 1,
+      "isDone": false,
+      "bgm": "high",
+      "CID": 2,
+      "condition": "CharacterList[3].love>1",
+      "script": "퀘스트 1번",
+      "background": "sand"
+    }
+  ]
+}

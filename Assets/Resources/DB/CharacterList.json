@@ -1,0 +1,78 @@
+{
+"CharacterList":[
+
+{
+"CID":0,
+"name":"매",
+"BID":0,
+"QID":0,
+"like":0,
+"script":"난 이 마을의 어린이들을 가르쳐주고 있지!",
+"image":"ao" 
+},
+{
+"IID":1,
+"name":"참새",
+"BID":1,
+"QID":1,
+"like":0,
+"script":"이 농장은 나한테 맡기라구!!(참새에게 방앗간 맡기는격)",
+"image":"ckato" 
+},
+{
+"IID":2,
+"name":"부엉이",
+"BID":2,
+"QID":2,
+"like":0,
+"script":"흠흠. 그래 내가 바로 이 마을의 이장이지.",
+"image":"qndjddl" 
+},
+{
+"IID":3,
+"name":"뱁새",
+"BID":1,
+"QID":1,
+"like":0,
+"description":"이 공원 내꺼야! 뽀짝뽀짝",
+"image":"qoqto" 
+},
+{
+"IID":4,
+"name":"동박새",
+"BID":4,
+"QID":4,
+"like":0,
+"script":"난 꿀을 먹어. 그리고 꽃집 주인이지! 후후",
+"image":"ehdqkrto" 
+},
+{
+"IID":5,
+"name":"앵무새",
+"BID":5,
+"QID":5,
+"like":0,
+"script":"따라하지 말라구~ ㅋㅋㅋ 내가 이 주막의 주인이야!",
+"image":"dodanto" 
+},
+{
+"IID":6,
+"name":"올빼미",
+"BID":6,
+"QID":6,
+"like":0,
+"script":"난 밤에 주로 활동하지. 여기 보초를 맡고있다구!",
+"image":"dhfQoal" 
+},
+{
+"IID":7,
+"name":"오리",
+"BID":7,
+"QID":7,
+"like":0,
+"description":"꽥꽥. 주로 호수에서 출현한다. tip)호수는 주거지역이다.",
+"image":"dhfl" 
+}
+
+]
+}
