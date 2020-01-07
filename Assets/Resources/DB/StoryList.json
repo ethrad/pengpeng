@@ -1,0 +1,14 @@
+{
+  "SL": [
+    {
+      "background": "grass",
+      "bgm": "high",
+      "script": "와 풀이다"
+    },
+    {
+      "background": "sky",
+      "bgm": "low",
+      "script": "우왕"
+    }
+  ]
+}
