@@ -11,6 +11,8 @@ public class Script
     public string background;
     public string bgm;
     public string script;
+    public string leftCha;
+    public string rightCha;
 }
 
 [Serializable]
@@ -30,6 +32,9 @@ public class StoryController : MonoBehaviour
     public static StoryDB storyList = new StoryDB();
     public GameObject background;
     public GameObject script;
+    public GameObject leftCha;
+    public GameObject rightCha;
+    public GameObject name;
     TextAsset textData;
     private int SN;
     public static int storyNum = 0;
@@ -56,7 +61,8 @@ public class StoryController : MonoBehaviour
 
     void SceneSetting()
     {
+        name.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script.Split(':')[0];
         background.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/" + storyList.SL[storyNum].Scripts[SN].background);
-        script.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script;
+        script.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script.Split(':')[1];
     }
 }
