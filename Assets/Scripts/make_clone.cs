@@ -3,15 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-using System.IO;
 
-[System.Serializable]
 public class make_clone : MonoBehaviour
 {
-    public static GameObject temp;
-    public static GameObject i;
+    public GameObject temp;
+    public GameObject i;
+    GameObject slot;
 
-    public static GameObject slot;
+    [Serializable]
+    public class Item
+    {
+        public int IID;
+        public string name;
+        public string description;
+        public string image;
+    }
+
+    [Serializable]
+    public class ItemDB
+    {
+        public List<Item> ItemList;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {/*
@@ -22,7 +35,7 @@ public class make_clone : MonoBehaviour
         Debug.Log("NOOOOOOOOOOOO");
         */
 
-        //temp = (GameObject)Instantiate(slot, transform) as GameObject;
+        temp = Instantiate<GameObject>(slot, i.GetComponent<Transform>());
 
         //GameObject sub1 = temp.Find("image").GetComponentsInChildren<Image>();
         //sub1.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/qoqto");
@@ -47,31 +60,14 @@ public class make_clone : MonoBehaviour
         //temp.transform.GetChild.GetComponent<i().spriteName = "qoqto";
         //}
     }
-    [Serializable]
-    public class Item
-    {
-        public int IID;
-        public string name;
-        public string description;
-        public string image;
-    }
-
-    [Serializable]
-    public class ItemDB
-    {
-        public List<Item> ItemList;
-    }
 
     public static ItemDB IL = new ItemDB();
     static TextAsset textData;
 
 
     // Update is called once per frame
-    public static void SlotUpdate()
+    public void SlotUpdate()
     {
-
-
-
         temp.transform.GetChild(2).GetComponent<Text>().text = "aa";
 
         textData = Resources.Load("DB/ItemList") as TextAsset;
@@ -80,18 +76,11 @@ public class make_clone : MonoBehaviour
         Debug.Log(length);
         for (int n = 1; n < length; n++)
         {
-            //temp = (GameObject)Instantiate(slot, transform) as GameObject;
+            temp = (GameObject)Instantiate(slot, i.GetComponent<Transform>()) as GameObject;
             temp.transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
             temp.transform.GetChild(3).GetComponent<Text>().text = IL.ItemList[n].description;
             temp.transform.GetChild(1).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
         }
 
-    }
-
-    void Update()
-    {
-        
-
-        //GameObject instance = Instantiate(slot, transform.position, transform.rotation,transform) as GameObject;
     }
 }
