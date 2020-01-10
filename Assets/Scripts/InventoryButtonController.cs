@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryButtonController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class InventoryButtonController : MonoBehaviour
     {
         InventoryPanel.SetActive(true);
         inventoryPanelUpdate();
+        make_clone.SlotUpdate();
     }
 
     void inventoryPanelUpdate()

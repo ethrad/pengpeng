@@ -38,12 +38,11 @@ public class ItemController : MonoBehaviour
         IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
         int length = IL.ItemList.Count;
         Debug.Log(length);
-        for (int n = 0; n < length; n++)
-        {
-            UI_name.GetComponent<Text>().text = IL.ItemList[n].name;
-            UI_description.GetComponent<Text>().text = IL.ItemList[n].description;
-            UI_image.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
-        }
+        
+        UI_name.GetComponent<Text>().text = IL.ItemList[0].name;
+        UI_description.GetComponent<Text>().text = IL.ItemList[0].description;
+        UI_image.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[0].image);
+        
         Debug.Log(IL.ItemList[0].name);
         Debug.Log("sss");
     }
