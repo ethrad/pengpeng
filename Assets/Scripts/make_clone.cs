@@ -26,8 +26,7 @@ public class make_clone : MonoBehaviour
 
     public static ItemDB IL = new ItemDB();
     static TextAsset textData;
-    public GameObject InventoryPanel;
-    int length;
+    public static int length;
 
     // Start is called before the first frame update
     void Start()
@@ -68,20 +67,20 @@ public class make_clone : MonoBehaviour
         textData = Resources.Load("DB/ItemList") as TextAsset;
         IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
         length = IL.ItemList.Count;
+
+
+        
+        
+    }
+
+    public void SlotUpdate()
+    {
         for (int n = 0; n < length; n++)
         {
             Instantiate(slot, i.GetComponent<Transform>());
             Debug.Log("sa");
         }
 
-        
-        
-    }
-
-
-
-    public void SlotUpdate()
-    {
         for (int n = 0; n < length; n++)
         {
             i.transform.GetChild(n).transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
@@ -89,6 +88,6 @@ public class make_clone : MonoBehaviour
             i.transform.GetChild(n).transform.GetChild(3).GetComponent<Text>().text = IL.ItemList[n].description;
             i.transform.GetChild(n).transform.GetChild(1).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
         }
-        InventoryPanel.SetActive(true);
+        
     }
 }
