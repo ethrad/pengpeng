@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class make_clone : MonoBehaviour
 {
-    public GameObject temp;
+    GameObject temp;
     public GameObject i;
-    GameObject slot;
+    public GameObject slot;
 
     [Serializable]
     public class Item
@@ -35,7 +35,7 @@ public class make_clone : MonoBehaviour
         Debug.Log("NOOOOOOOOOOOO");
         */
 
-        temp = Instantiate<GameObject>(slot, i.GetComponent<Transform>());
+        //temp = Instantiate<GameObject>(slot, i.GetComponent<Transform>());
 
         //GameObject sub1 = temp.Find("image").GetComponentsInChildren<Image>();
         //sub1.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/qoqto");
@@ -68,16 +68,18 @@ public class make_clone : MonoBehaviour
     // Update is called once per frame
     public void SlotUpdate()
     {
-        temp.transform.GetChild(2).GetComponent<Text>().text = "aa";
+        //temp.transform.GetChild(2).GetComponent<Text>().text = "aa";
 
         textData = Resources.Load("DB/ItemList") as TextAsset;
         IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
         int length = IL.ItemList.Count;
+        string t;
         Debug.Log(length);
         for (int n = 1; n < length; n++)
         {
-            temp = (GameObject)Instantiate(slot, i.GetComponent<Transform>()) as GameObject;
+            temp = (GameObject)Instantiate(slot, i.GetComponent<Transform>());
             temp.transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
+            Debug.Log("temp 이름 : " + temp.transform.GetChild(2));
             temp.transform.GetChild(3).GetComponent<Text>().text = IL.ItemList[n].description;
             temp.transform.GetChild(1).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
         }

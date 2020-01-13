@@ -13,7 +13,7 @@ public class InventoryButtonController : MonoBehaviour
     {
         InventoryPanel.SetActive(true);
         inventoryPanelUpdate();
-        //item.make_clone.SlotUpdate();
+        item.GetComponent<make_clone>().SlotUpdate();
     }
 
     void inventoryPanelUpdate()
