@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class make_clone : MonoBehaviour
 {
-    public GameObject temp;
     public GameObject i;
     public GameObject slot;
 
@@ -64,20 +63,15 @@ public class make_clone : MonoBehaviour
     public static ItemDB IL = new ItemDB();
     static TextAsset textData;
 
-
-    // Update is called once per frame
     public void SlotUpdate()
     {
-        //temp.transform.GetChild(2).GetComponent<Text>().text = "aa";
-
         textData = Resources.Load("DB/ItemList") as TextAsset;
         IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
         int length = IL.ItemList.Count;
         for (int n = 1; n < length; n++)
         {
-            temp = (GameObject)GameObject.Instantiate(slot, i.GetComponent<Transform>());
-            temp.transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
-            Debug.Log("temp 이름 : " + temp.transform.GetChild(2).GetComponent<Text>().text);
+            GameObject temp = GameObject.Instantiate(slot, i.GetComponent<Transform>()) as GameObject;
+            i.transform.GetChild(1).transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
             temp.transform.GetChild(3).GetComponent<Text>().text = IL.ItemList[n].description;
             temp.transform.GetChild(1).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
         }

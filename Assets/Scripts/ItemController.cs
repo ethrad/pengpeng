@@ -40,9 +40,6 @@ public class ItemController : MonoBehaviour
         UI_name.GetComponent<Text>().text = IL.ItemList[0].name;
         UI_description.GetComponent<Text>().text = IL.ItemList[0].description;
         UI_image.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[0].image);
-        
-        Debug.Log(IL.ItemList[0].name);
-        Debug.Log("sss");
     }
 
 }
