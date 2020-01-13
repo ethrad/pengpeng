@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class make_clone : MonoBehaviour
 {
-    GameObject temp;
+    public GameObject temp;
     public GameObject i;
     public GameObject slot;
 
@@ -73,13 +73,11 @@ public class make_clone : MonoBehaviour
         textData = Resources.Load("DB/ItemList") as TextAsset;
         IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
         int length = IL.ItemList.Count;
-        string t;
-        Debug.Log(length);
         for (int n = 1; n < length; n++)
         {
-            temp = (GameObject)Instantiate(slot, i.GetComponent<Transform>());
+            temp = (GameObject)GameObject.Instantiate(slot, i.GetComponent<Transform>());
             temp.transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
-            Debug.Log("temp 이름 : " + temp.transform.GetChild(2));
+            Debug.Log("temp 이름 : " + temp.transform.GetChild(2).GetComponent<Text>().text);
             temp.transform.GetChild(3).GetComponent<Text>().text = IL.ItemList[n].description;
             temp.transform.GetChild(1).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
         }

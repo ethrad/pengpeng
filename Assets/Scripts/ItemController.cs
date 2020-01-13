@@ -32,8 +32,6 @@ public class ItemController : MonoBehaviour
 
     void Start()
     {
-        
-
         textData = Resources.Load("DB/ItemList") as TextAsset;
         IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
         int length = IL.ItemList.Count;
