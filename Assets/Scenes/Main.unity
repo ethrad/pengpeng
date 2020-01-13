@@ -169,10 +169,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 13065410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67a7e38cb76df141b8de11a952ab58a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a2c50a127ecd034ea4f6f5674dfa2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SlotPanel: {fileID: 585968191}
+  NeighborPanel: {fileID: 585968191}
+  canvas: {fileID: 19947224}
+  neighbor: {fileID: 1620916216}
 --- !u!114 &13065413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +219,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 13065412}
-        m_MethodName: EscapeButtonClicked
+        m_MethodName: OnEscapeButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -276,6 +278,7 @@ GameObject:
   - component: {fileID: 19947226}
   - component: {fileID: 19947225}
   - component: {fileID: 19947229}
+  - component: {fileID: 19947230}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -384,6 +387,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: {fileID: 1324214612}
   slot: {fileID: 2656363980818130201, guid: b60dc38ef78d26049a57c5d0dea61379, type: 3}
+--- !u!114 &19947230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19947224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74337cac77e7146498aa82881652ca41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bird: {fileID: 4511610370386648917, guid: 192c9053a349a6842b621b34b9fc0d0f, type: 3}
+  neighbor: {fileID: 1620916216}
+  script: {fileID: 0}
+  chaList:
+    CL: []
 --- !u!1 &71716444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,6 +1166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NeighborPanel: {fileID: 585968191}
+  canvas: {fileID: 19947224}
+  neighbor: {fileID: 1620916216}
 --- !u!1 &435530882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,6 +3018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1620916217}
+  - component: {fileID: 1620916218}
   m_Layer: 5
   m_Name: Neighbor
   m_TagString: Untagged
@@ -3022,6 +3045,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.00015363246}
   m_SizeDelta: {x: 0, y: 2840.5}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1620916218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620916216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 25
+    m_Right: 25
+    m_Top: 30
+    m_Bottom: 30
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 240, y: 370}
+  m_Spacing: {x: 15, y: 30}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1638521161
 GameObject:
   m_ObjectHideFlags: 0
