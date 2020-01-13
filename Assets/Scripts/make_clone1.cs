@@ -53,7 +53,7 @@ public class make_clone1 : MonoBehaviour
         {
             neighbor.transform.GetChild(n).transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + chaList.CL[n].image);
             neighbor.transform.GetChild(n).transform.GetChild(1).GetComponent<Text>().text = chaList.CL[n].name;
-            neighbor.transform.GetChild(n).transform.GetChild(2).GetComponent<Text>().text = chaList.CL[n].like.ToString();
+            neighbor.transform.GetChild(n).transform.GetChild(2).GetComponent<Text>().text = "호감도: "+chaList.CL[n].like.ToString();
         }
 
     }
