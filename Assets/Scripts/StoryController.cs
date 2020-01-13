@@ -34,7 +34,7 @@ public class StoryController : MonoBehaviour
     public GameObject script;
     public GameObject leftCha;
     public GameObject rightCha;
-    public GameObject name;
+    public GameObject n;
     TextAsset textData;
     private int SN;
     public static int storyNum = 0;
@@ -61,7 +61,7 @@ public class StoryController : MonoBehaviour
 
     void SceneSetting()
     {
-        name.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script.Split(':')[0];
+        n.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script.Split(':')[0];
         background.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/" + storyList.SL[storyNum].Scripts[SN].background);
         script.transform.GetComponent<Text>().text = storyList.SL[storyNum].Scripts[SN].script.Split(':')[1];
         leftCha.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/" + storyList.SL[storyNum].Scripts[SN].leftCha);
