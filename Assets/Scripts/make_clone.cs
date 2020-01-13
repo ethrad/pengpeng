@@ -23,10 +23,16 @@ public class make_clone : MonoBehaviour
     {
         public List<Item> ItemList;
     }
-    
+
+    public static ItemDB IL = new ItemDB();
+    static TextAsset textData;
+    public GameObject InventoryPanel;
+    int length;
+
     // Start is called before the first frame update
     void Start()
     {/*
+
         GameObject temp=(GameObject)Instantiate(slot, transform); //as GameObject
         ItemController a = temp.GetComponent<ItemController>();
         a.UI_name.transform.GetComponent<Text>().text = "와";
@@ -58,23 +64,31 @@ public class make_clone : MonoBehaviour
         //temp.GetComponentInChildren < UI_image >= "qoqto";
         //temp.transform.GetChild.GetComponent<i().spriteName = "qoqto";
         //}
+
+        textData = Resources.Load("DB/ItemList") as TextAsset;
+        IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
+        length = IL.ItemList.Count;
+        for (int n = 0; n < length; n++)
+        {
+            Instantiate(slot, i.GetComponent<Transform>());
+            Debug.Log("sa");
+        }
+
+        
+        
     }
 
-    public static ItemDB IL = new ItemDB();
-    static TextAsset textData;
+
 
     public void SlotUpdate()
     {
-        textData = Resources.Load("DB/ItemList") as TextAsset;
-        IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
-        int length = IL.ItemList.Count;
-        for (int n = 1; n < length; n++)
+        for (int n = 0; n < length; n++)
         {
-            GameObject temp = GameObject.Instantiate(slot, i.GetComponent<Transform>()) as GameObject;
-            i.transform.GetChild(1).transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
-            temp.transform.GetChild(3).GetComponent<Text>().text = IL.ItemList[n].description;
-            temp.transform.GetChild(1).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
+            i.transform.GetChild(n).transform.GetChild(2).GetComponent<Text>().text = IL.ItemList[n].name;
+            Debug.Log(i.transform.GetChild(n).transform.GetChild(2).GetComponent<Text>().text);
+            i.transform.GetChild(n).transform.GetChild(3).GetComponent<Text>().text = IL.ItemList[n].description;
+            i.transform.GetChild(n).transform.GetChild(1).GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[n].image);
         }
-
+        InventoryPanel.SetActive(true);
     }
 }

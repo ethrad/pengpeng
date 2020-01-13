@@ -5,19 +5,10 @@ using UnityEngine.UI;
 
 public class InventoryButtonController : MonoBehaviour
 {
-    public GameObject item;
-    public GameObject InventoryPanel;
-    
+    public GameObject canvas;
 
     public void OnInventoryButtonClicked()
     {
-        InventoryPanel.SetActive(true);
-        inventoryPanelUpdate();
-        item.GetComponent<make_clone>().SlotUpdate();
-    }
-
-    void inventoryPanelUpdate()
-    {
-
+        canvas.GetComponent<make_clone>().SlotUpdate();
     }
 }

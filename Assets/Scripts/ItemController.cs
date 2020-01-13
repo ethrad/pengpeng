@@ -32,14 +32,7 @@ public class ItemController : MonoBehaviour
 
     void Start()
     {
-        textData = Resources.Load("DB/ItemList") as TextAsset;
-        IL = JsonUtility.FromJson<ItemDB>(textData.ToString());
-        int length = IL.ItemList.Count;
-        Debug.Log(length);
         
-        UI_name.GetComponent<Text>().text = IL.ItemList[0].name;
-        UI_description.GetComponent<Text>().text = IL.ItemList[0].description;
-        UI_image.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + IL.ItemList[0].image);
     }
 
 }
