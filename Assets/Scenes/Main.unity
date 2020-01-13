@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 19947227}
   - component: {fileID: 19947226}
   - component: {fileID: 19947225}
+  - component: {fileID: 19947229}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -369,6 +370,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &19947229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19947224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7ac34afa5746d409c6dafe7ce7fca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i: {fileID: 1324214612}
+  slot: {fileID: 2656363980818130201, guid: b60dc38ef78d26049a57c5d0dea61379, type: 3}
 --- !u!1 &71716444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,8 +1643,8 @@ GameObject:
   - component: {fileID: 850471521}
   - component: {fileID: 850471524}
   - component: {fileID: 850471523}
-  - component: {fileID: 850471522}
   - component: {fileID: 850471525}
+  - component: {fileID: 850471522}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1701,7 +1716,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 850471525}
-        m_MethodName: EscapeButtonClicked
+        m_MethodName: OnEscapeButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1756,10 +1771,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 850471520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67a7e38cb76df141b8de11a952ab58a, type: 3}
+  m_Script: {fileID: 11500000, guid: eeb6eb370764b0446a28dcf2e1cbbe8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SlotPanel: {fileID: 77550542}
+  canvas: {fileID: 19947224}
+  item: {fileID: 1324214612}
+  InventoryPanel: {fileID: 77550542}
 --- !u!1 &855972441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,7 +2062,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb6eb370764b0446a28dcf2e1cbbe8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 19947224}
   item: {fileID: 1324214612}
+  InventoryPanel: {fileID: 77550542}
 --- !u!1 &1089229814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: {fileID: 1324214612}
   slot: {fileID: 2656363980818130201, guid: b60dc38ef78d26049a57c5d0dea61379, type: 3}
-  InventoryPanel: {fileID: 77550542}
 --- !u!114 &1324214615
 MonoBehaviour:
   m_ObjectHideFlags: 0
