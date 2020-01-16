@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
+    void Awake()
+    {
+        Screen.SetResolution(828, 1792, false);
+    }
+
     public static int AreaNum=0;
 
     [Serializable]
