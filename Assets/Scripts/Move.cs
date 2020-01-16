@@ -27,6 +27,10 @@ public class Move : MonoBehaviour
     public static AreaDB AL = new AreaDB();
     static TextAsset textData;
 
+    void Awake()
+    {
+        Screen.SetResolution(828, 1792, false);
+    }
     // Start is called before the first frame update
     void Start()
     {
