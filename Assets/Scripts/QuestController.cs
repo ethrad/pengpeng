@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestButtonController : MonoBehaviour
+public class QuestController : MonoBehaviour
 {
     public GameObject QuestPanel;
 
@@ -10,6 +10,18 @@ public class QuestButtonController : MonoBehaviour
     {
         QuestPanel.SetActive(true);
         questPanelUpdate();
+    }
+    void questCheck(int questNum)
+    {
+        switch (questNum)
+        {
+            case 0:
+
+                break;
+            case 1:
+                break;
+
+        }
     }
 
     void questPanelUpdate() {
