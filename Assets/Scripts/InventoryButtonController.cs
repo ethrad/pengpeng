@@ -13,6 +13,7 @@ public class InventoryButtonController : MonoBehaviour
     {
         canvas.GetComponent<make_clone>().SlotUpdate();
         InventoryPanel.SetActive(true);
+        Move.touch = false;
     }
 
     public void OnEscapeButtonClicked()
@@ -21,5 +22,7 @@ public class InventoryButtonController : MonoBehaviour
             Destroy(item.transform.GetChild(n).gameObject);
         }
         InventoryPanel.SetActive(false);
+        Debug.Log("dkdkdk");
+        Move.touch = true;
     }
 }

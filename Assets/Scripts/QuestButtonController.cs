@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestButtonController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class QuestButtonController : MonoBehaviour
     {
         QuestPanel.SetActive(true);
         questPanelUpdate();
+        Move.touch = false;
     }
 
     void questPanelUpdate() {

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
+    public static bool touch = true;
     public static int AreaNum=0;
 
     [Serializable]
@@ -38,51 +39,54 @@ public class Move : MonoBehaviour
 
     public virtual void Update()
     {
-         
-        if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Right))
+
+        if (touch == true)
         {
-            if (AL.AreaList[AreaNum].canMove[0] != -1)
+            if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Right))
             {
-                AreaNum = AL.AreaList[AreaNum].canMove[0];
-                SceneManager.LoadScene("Area" + AreaNum);
-            }
-            Debug.Log(AreaNum);
+                if (AL.AreaList[AreaNum].canMove[0] != -1)
+                {
+                    AreaNum = AL.AreaList[AreaNum].canMove[0];
+                    SceneManager.LoadScene("Area" + AreaNum);
+                }
+                Debug.Log(AreaNum);
 
-        }
-        
-        if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Down))
-        {
-            if (AL.AreaList[AreaNum].canMove[1] != -1)
+            }
+
+            if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Down))
             {
-                AreaNum = AL.AreaList[AreaNum].canMove[1];
-                SceneManager.LoadScene("Area" + AreaNum);
+                if (AL.AreaList[AreaNum].canMove[1] != -1)
+                {
+                    AreaNum = AL.AreaList[AreaNum].canMove[1];
+                    SceneManager.LoadScene("Area" + AreaNum);
+                }
+                Debug.Log(AreaNum);
             }
-            Debug.Log(AreaNum);
-        }
 
-        if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Left))
-        {
-            if (AL.AreaList[AreaNum].canMove[2] != -1)
+            if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Left))
             {
-                AreaNum = AL.AreaList[AreaNum].canMove[2];
-                SceneManager.LoadScene("Area" + AreaNum);
+                if (AL.AreaList[AreaNum].canMove[2] != -1)
+                {
+                    AreaNum = AL.AreaList[AreaNum].canMove[2];
+                    SceneManager.LoadScene("Area" + AreaNum);
+                }
+                Debug.Log(AreaNum);
+
             }
-            Debug.Log(AreaNum);
 
-        }
-
-        if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Up))
-        {
-            
-            if (AL.AreaList[AreaNum].canMove[3] != -1)
+            if (SwipeManager.Instance.IsSwiping(SwipeManager.SwipeDirection.Up))
             {
-                AreaNum = AL.AreaList[AreaNum].canMove[3];
-                SceneManager.LoadScene("Area" + AreaNum);
-            }
-            Debug.Log(AreaNum);
-        }
 
-        ExampleCoroutine();
+                if (AL.AreaList[AreaNum].canMove[3] != -1)
+                {
+                    AreaNum = AL.AreaList[AreaNum].canMove[3];
+                    SceneManager.LoadScene("Area" + AreaNum);
+                }
+                Debug.Log(AreaNum);
+            }
+
+            ExampleCoroutine();
+        }
     }
 
     IEnumerator ExampleCoroutine()
