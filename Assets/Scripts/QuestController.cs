@@ -9,9 +9,10 @@ public class QuestController : MonoBehaviour
 
     public void OnQuestButtonClicked()
     {
+        Move.touch = false;
         QuestPanel.SetActive(true);
         questPanelUpdate();
-        Move.touch = false;
+        
     }
     void questCheck(int questNum)
     {
