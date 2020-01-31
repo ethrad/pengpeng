@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 19947229}
   - component: {fileID: 19947230}
   - component: {fileID: 19947231}
+  - component: {fileID: 19947232}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -420,6 +421,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInfo: {fileID: 169882853}
+--- !u!114 &19947232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19947224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67a7e38cb76df141b8de11a952ab58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panels:
+  - {fileID: 77550542}
+  - {fileID: 435530882}
+  - {fileID: 585968191}
+  - {fileID: 1636347268}
 --- !u!1 &71716444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,10 +2102,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 855972441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67a7e38cb76df141b8de11a952ab58a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b95c66973b9c3f4e8ea4e946344423d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SlotPanel: {fileID: 435530882}
+  QuestPanel: {fileID: 435530882}
 --- !u!114 &855972444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,7 +2150,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 855972443}
-        m_MethodName: EscapeButtonClicked
+        m_MethodName: OnEscapeButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

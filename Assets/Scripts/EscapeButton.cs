@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class EscapeButton : MonoBehaviour
 {
-    public GameObject SlotPanel;
+    public GameObject[] Panels;
 
-    public void EscapeButtonClicked()
-    {
-        SlotPanel.SetActive(false);
+    void Update() {
+        //if (Application.platform == RuntimePlatform.Android)
+        //{
+            if (Input.GetKey(KeyCode.Escape)){
+                foreach (GameObject p in Panels) {
+                    p.SetActive(false);
+                    Move.touch = true;
+                }
+            }
+
+        //}
     }
 }

@@ -14,6 +14,7 @@ public class QuestController : MonoBehaviour
         questPanelUpdate();
         
     }
+
     void questCheck(int questNum)
     {
         switch (questNum)
@@ -25,6 +26,11 @@ public class QuestController : MonoBehaviour
                 break;
 
         }
+    }
+
+    public void OnEscapeButtonClicked() {
+        QuestPanel.SetActive(false);
+        Move.touch = true;
     }
 
     void questPanelUpdate() {

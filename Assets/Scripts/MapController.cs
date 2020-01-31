@@ -6,9 +6,15 @@ public class MapController : MonoBehaviour
 {
     public GameObject MapPanel;
 
-    public void OnMapButtonClicked() {
+    public void OnMapButtonClicked()
+    {
         Move.touch = false;
         MapPanel.SetActive(true);
+    }
 
+    public void OnEscapeButtonClicked()
+    {
+        MapPanel.SetActive(false);
+        Move.touch = true;
     }
 }
