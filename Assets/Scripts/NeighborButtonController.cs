@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NeighborButtonController : MonoBehaviour
 {
@@ -8,10 +9,12 @@ public class NeighborButtonController : MonoBehaviour
     public GameObject NeighborPanel;
     public GameObject canvas;
     public GameObject neighbor;
+
     public void OnNeighborButtonClicked()
     {
         canvas.GetComponent<make_clone1>().SlotUpdate();
         NeighborPanel.SetActive(true);
+        Move.touch = false;
 
     }
 
@@ -22,5 +25,6 @@ public class NeighborButtonController : MonoBehaviour
             Destroy(neighbor.transform.GetChild(n).gameObject);
         }
         NeighborPanel.SetActive(false);
+        Move.touch = true;
     }
 }
