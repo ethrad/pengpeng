@@ -13,9 +13,8 @@ public class NeighborButtonController : MonoBehaviour
     public void OnNeighborButtonClicked()
     {
         canvas.GetComponent<make_clone1>().SlotUpdate();
-        Move.touch = false;
         NeighborPanel.SetActive(true);
-        
+        Move.touch = false;
 
     }
 

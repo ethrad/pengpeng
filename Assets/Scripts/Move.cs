@@ -39,7 +39,7 @@ public class Move : MonoBehaviour
         //length = AL.AreaList.Count;
     }
 
-
+    
 
     public virtual void Update()
     {

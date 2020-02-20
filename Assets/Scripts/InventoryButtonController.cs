@@ -12,8 +12,8 @@ public class InventoryButtonController : MonoBehaviour
     public void OnInventoryButtonClicked()
     {
         canvas.GetComponent<make_clone>().SlotUpdate();
-        Move.touch = false;
         InventoryPanel.SetActive(true);
+        Move.touch = false;
     }
 
     public void OnEscapeButtonClicked()
