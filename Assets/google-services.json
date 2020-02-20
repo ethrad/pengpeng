@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "376987115831",
+    "firebase_url": "https://saegame-b26d3.firebaseio.com",
+    "project_id": "saegame-b26d3",
+    "storage_bucket": "saegame-b26d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376987115831:android:1d39c877af74b0bd43fab2",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.pengpeng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376987115831-45qjr7lul3tq24100c5s0k9tcfdk1jd1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFSVPo3Rvt9ylMtG3MfiYeflq-f5oGCNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376987115831-45qjr7lul3tq24100c5s0k9tcfdk1jd1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "376987115831-gq0hgk64l109ebair6af5uduephuhhk3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.DefaultCompany.pengpeng"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
