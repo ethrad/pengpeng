@@ -18,7 +18,7 @@ public class BackEndFederationAuth : MonoBehaviour
 
         //커스텀된 정보로 GPGS 초기화
         PlayGamesPlatform.InitializeInstance(config);
-        PlayGamesPlatform.DebugLogEnabled = false;
+        PlayGamesPlatform.DebugLogEnabled = true;
 
         //GPGS 시작.
         PlayGamesPlatform.Activate();
@@ -86,24 +86,6 @@ public class BackEndFederationAuth : MonoBehaviour
                     Debug.Log("차단된 사용자 입니다. 차단 사유 : " + BRO.GetErrorCode());
                     break;
             }
-        }
-    }
-
-    // 이미 가입된 상태인지 확인
-    public void OnClickCheckUserAuthenticate()
-    {
-        BackendReturnObject BRO = Backend.BMember.CheckUserInBackend(GetTokens(), FederationType.Google);
-        if (BRO.GetStatusCode() == "200")
-        {
-            Debug.Log("가입 중인 계정입니다.");
-
-            // 해당 계정 정보
-            Debug.Log(BRO.GetReturnValue());
-        }
-
-        else
-        {
-            Debug.Log("가입된 계정이 아닙니다.");
         }
     }
 }
